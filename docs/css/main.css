@@ -1,0 +1,184 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #26292D;
+}
+.wrapper{
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.preloader{
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title span{
+    color: #5C62EC;
+}
+
+
+.countdown{ 
+    display: none;
+    column-gap: 40px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time h2{
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.time p{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+
+/*Preloader*/
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+  
+
+
+  
+  body {
+    background-color: black;
+    /* Firefox */
+    background-image:
+       -moz-radial-gradient(circle, #FFFFFF 2px, rgba(248,255,128,.5) 4px, transparent 40px),
+       -moz-radial-gradient(circle, #FFFFFF 1px, rgba(255,186,170,.4) 3px, transparent 30px),
+       -moz-radial-gradient(ellipse, rgba(255,255,255,.9) 1px, rgba(251,255,186,.3) 2px, transparent 40px),
+       -moz-radial-gradient(ellipse, rgba(255,255,255,.4), rgba(253,255,219,.2) 1px, transparent 30px);
+    /* Webkit */
+    background-image:
+       -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 40, from(white), color-stop(0.1, rgba(248,255,128,.5)), to(transparent)),
+       -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 30, from(white), color-stop(0.1, rgba(255,186,170,.4)), to(transparent)),
+       -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 40, from(rgba(255,255,255,.9)), color-stop(0.05, rgba(251,255,186,.3)), to(transparent)),
+       -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(rgba(255,255,255,.4)), color-stop(0.03, rgba(253,255,219,.2)), to(transparent));
+    /* Background Attributes */
+    background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+    background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    /* Animation */
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* Firefox */
+    -moz-animation-name: movement;
+    -moz-animation-duration: 5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    /* Webkit */
+    -webkit-animation-name: movement;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+ }
+ @keyframes movement
+ {
+    from {
+          background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+    to {
+          background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+ }
+ @-moz-keyframes movement
+ {
+    from {
+          background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+    to {
+          background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+ }
+ @-webkit-keyframes movement
+ {
+    from {
+          background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+    to {
+          background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+ }

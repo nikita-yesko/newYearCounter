@@ -1,0 +1,13 @@
+@media (max-width:700px){
+    .title{
+        font-size: 40px;
+    }
+    .time h2{
+        font-size: 80px;
+    }
+    
+    .time p{
+        font-size: 32px;
+    }
+    
+}
